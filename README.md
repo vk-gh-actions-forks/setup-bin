@@ -12,7 +12,7 @@ GitHub action to download and install go and rust binaries from github release a
       - uses: actions/checkout@v2
       - name: Setup bin
         id: serup-bin-go
-        uses: tj-actions/setup-bin@v1
+        uses: tj-actions/setup-bin@cc810cdd7ca2809436d6cd0c03614b049e787071 # v1
         with:
           language-type: 'go'
           repository-owner: [REPOSITORY_OWNER]
@@ -27,13 +27,14 @@ GitHub action to download and install go and rust binaries from github release a
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|                                      INPUT                                       |  TYPE  | REQUIRED |         DEFAULT         |                       DESCRIPTION                        |
-|----------------------------------------------------------------------------------|--------|----------|-------------------------|----------------------------------------------------------|
-|     <a name="input_language-type"></a>[language-type](#input_language-type)      | string |   true   |                         | Language type of package to <br>install: `rust` or `go`  |
-|          <a name="input_repository"></a>[repository](#input_repository)          | string |   true   |                         |       Repository where the binary is <br>located         |
-| <a name="input_repository-owner"></a>[repository-owner](#input_repository-owner) | string |   true   |                         |    Repository owner where the binary <br>is located      |
-|                 <a name="input_token"></a>[token](#input_token)                  | string |  false   | `"${{ github.token }}"` |          GITHUB\_TOKEN or a Repo scoped <br>PAT           |
-|              <a name="input_version"></a>[version](#input_version)               | string |  false   |       `"latest"`        |          Version of the binary to <br>install            |
+|                                              INPUT                                              |  TYPE  | REQUIRED |         DEFAULT         |                       DESCRIPTION                        |
+|-------------------------------------------------------------------------------------------------|--------|----------|-------------------------|----------------------------------------------------------|
+| <a name="input_add-prefix-to-version"></a>[add-prefix-to-version](#input_add-prefix-to-version) | string |  false   |        `"true"`         |     Add v to the version <br>if it doesn't have it       |
+|             <a name="input_language-type"></a>[language-type](#input_language-type)             | string |   true   |                         | Language type of package to <br>install: `rust` or `go`  |
+|                 <a name="input_repository"></a>[repository](#input_repository)                  | string |   true   |                         |       Repository where the binary is <br>located         |
+|        <a name="input_repository-owner"></a>[repository-owner](#input_repository-owner)         | string |   true   |                         |    Repository owner where the binary <br>is located      |
+|                         <a name="input_token"></a>[token](#input_token)                         | string |  false   | `"${{ github.token }}"` |          GITHUB\_TOKEN or a Repo scoped <br>PAT           |
+|                      <a name="input_version"></a>[version](#input_version)                      | string |  false   |       `"latest"`        |          Version of the binary to <br>install            |
 
 <!-- AUTO-DOC-INPUT:END -->
 
